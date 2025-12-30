@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Pagination</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section class="card-section">
+        <div class="container">
+            <h1 class="card-title">
+                Select Number Of Rows
+            </h1>
+            <form class="card-form">
+                <div class="card-select">
+                    <span>Show All Numbers</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 9l6 6l6 -6" />
+                    </svg>
+                </div>
+                <ul class="card-select-option">
+                    <li class="card-option">5</li>
+                    <li class="card-option">10</li>
+                    <li class="card-option">15</li>
+                    <li class="card-option">20</li>
+                    <li class="card-option">25</li>
+                    <li class="card-option">30</li>
+                </ul>
+            </form>
+            <div class="table-content">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Number</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Kunal Verma</td>
+                        <td>kunal.verma@testmail.com</td>
+                        <td>9000010003</td>
+                        <td>2025-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ananya Gupta</td>
+                        <td>ananya.gupta@testmail.com</td>
+                        <td>9000010004</td>
+                        <td>2025-01-04</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Kunal Verma</td>
+                        <td>kunal.verma@testmail.com</td>
+                        <td>9000010003</td>
+                        <td>2025-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Ananya Gupta</td>
+                        <td>ananya.gupta@testmail.com</td>
+                        <td>9000010004</td>
+                        <td>2025-01-04</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Kunal Verma</td>
+                        <td>kunal.verma@testmail.com</td>
+                        <td>9000010003</td>
+                        <td>2025-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Ananya Gupta</td>
+                        <td>ananya.gupta@testmail.com</td>
+                        <td>9000010004</td>
+                        <td>2025-01-04</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Kunal Verma</td>
+                        <td>kunal.verma@testmail.com</td>
+                        <td>9000010003</td>
+                        <td>2025-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Ananya Gupta</td>
+                        <td>ananya.gupta@testmail.com</td>
+                        <td>9000010004</td>
+                        <td>2025-01-04</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Kunal Verma</td>
+                        <td>kunal.verma@testmail.com</td>
+                        <td>9000010003</td>
+                        <td>2025-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Ananya Gupta</td>
+                        <td>ananya.gupta@testmail.com</td>
+                        <td>9000010004</td>
+                        <td>2025-01-04</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Kunal Verma</td>
+                        <td>kunal.verma@testmail.com</td>
+                        <td>9000010003</td>
+                        <td>2025-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Ananya Gupta</td>
+                        <td>ananya.gupta@testmail.com</td>
+                        <td>9000010004</td>
+                        <td>2025-01-04</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Kunal Verma</td>
+                        <td>kunal.verma@testmail.com</td>
+                        <td>9000010003</td>
+                        <td>2025-01-03</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>Ananya Gupta</td>
+                        <td>ananya.gupta@testmail.com</td>
+                        <td>9000010004</td>
+                        <td>2025-01-04</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Aarav Mehta</td>
+                        <td>aarav.mehta@testmail.com</td>
+                        <td>9000010001</td>
+                        <td>2025-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Riya Sharma</td>
+                        <td>riya.sharma@testmail.com</td>
+                        <td>9000010002</td>
+                        <td>2025-01-02</td>
+                    </tr>
+                </table>
+            </div>
+            <ul class="custom-pagination">
+                <li class="custom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 6l-6 6l6 6" />
+                    </svg>
+                </li>
+                <li class="custom-icon">
+                    <span>1</span>
+                </li>
+                <li class="custom-icon">
+                    <span>2</span>
+                </li>
+                <li class="custom-icon">
+                    <span>3</span>
+                </li>
+                <li class="custom-icon">
+                    <span>4</span>
+                </li>
+                <li class="custom-icon">
+                    <span>5</span>
+                </li>
+                <li class="custom-icon">
+                    <span>6</span>
+                </li>
+                <li class="custom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 6l6 6l-6 6" />
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
