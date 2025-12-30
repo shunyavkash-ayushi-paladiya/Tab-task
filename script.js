@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  var nombrePage = $(".slider-cards").length;
+  var nombrePage = document.querySelectorAll(".slider-cards").length;
 
   showPage = function (pagination) {
     if (pagination < 0 || pagination >= nombrePage) return;
