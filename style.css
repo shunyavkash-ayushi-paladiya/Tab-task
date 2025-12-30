@@ -49,6 +49,7 @@ img {
     justify-content: center;
 }
 
+
 .slider-card-img {
     border-radius: 20px;
 }
@@ -57,6 +58,7 @@ img {
     border-radius: 20px;
     box-shadow: 6px 6px 10px 0px #0000003b;
     padding: 20px;
+    max-width: 400px;
 }
 
 .slider-card-content {
@@ -120,65 +122,12 @@ img {
     color: #535862;
 }
 
-.splide.splide-slider {
-    visibility: visible;
+.slider-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.splide__track.splide-slider-track {
-    overflow: visible;
-}
-
-.splide__pagination {
-    margin-top: 40px;
-    top: 100%;
-    gap: 10px;
-}
-
-.splide__pagination__page {
-    margin: 0;
-    width: 24px;
-    height: 24px;
-    background-color: #6941C6;
-    opacity: 100%;
-    border-radius: 4px;
-    color: white;
-    font-family: "Inter", sans-serif;
-}
-
-.splide__pagination__page.is-active {
-    background-color: #6941C6;
-}
-
-.splide__arrow {
-    background: #6941C6;
-    border-radius: 4px;
-    padding: 20px;
-    width: max-content;
-    color: white;
-    font-size: 16px;
-    opacity: 100%;
-    font-family: "Inter", sans-serif;
-    transform: none;
-    top: 100%;
-    margin-top: 30px;
-}
-
-.splide__arrow--prev svg {
-    display: none;
-}
-
-.splide__arrow--next svg {
-    display: none;
-}
-
-.splide__pagination {
-    counter-reset: pagination-num;
-}
-
-.splide__pagination__page:before {
-    counter-increment: pagination-num;
-    content: counter(pagination-num);
-}
 
 /* tabs  */
 
@@ -194,10 +143,10 @@ img {
 .tab-list {
     display: flex;
     margin-bottom: 24px;
+    overflow-x: auto;
 }
 
 .tab-item {
-    overflow: hidden;
     cursor: pointer;
     padding: 12px 8px;
     margin-right: 24px;
@@ -207,6 +156,7 @@ img {
     font-size: 18px;
     position: relative;
     color: #777777;
+    white-space: nowrap;
 }
 
 .tab-item:before {
@@ -256,6 +206,11 @@ img {
     font-size: 16px;
 }
 
+.tab{
+    max-width: max-content;
+    margin: auto;
+}
+
 .tab .tab .tab-content {
     padding: 0;
 }
@@ -271,6 +226,8 @@ img {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tab-title{
@@ -300,3 +257,50 @@ img {
 .tab-content-item p{
     margin-top: 20px;
 }
+
+#pagin{
+    margin-top: 30px;
+  }
+  nav {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e2e8f0;
+    padding: 10px 30px;
+    border-radius: 5px;
+  }
+  nav ul {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  nav a:hover {
+    opacity: 1;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    margin: 8px;
+    color: #000;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  nav ul li:hover a {
+    opacity: 1;
+  }
+  .active a {
+    opacity: 1;
+    cursor: pointer;
+  }
+

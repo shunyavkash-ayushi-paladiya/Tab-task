@@ -2,6 +2,10 @@
     .nested-item-content {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .slider-cards {
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -30,6 +34,16 @@
     .nested-item-content {
         margin-top: 44px;
     }
+
+    .slider-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .custom-slider{
+        padding: 50px 0;
+    }
 }
 
 @media screen and (max-width:575px) {
@@ -39,5 +53,17 @@
 
     .splide__pagination{
         display: none;
+    }
+
+    .tab-list{
+        overflow-x: auto;
+    }
+
+    .slider-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .slider-card{
+        max-width: 100%;
     }
 }
