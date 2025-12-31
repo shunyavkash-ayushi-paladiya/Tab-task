@@ -1,5 +1,31 @@
-@media screen and (max-width:575px){
-    .card-title{
+@media screen and (max-width:575px) {
+    .card-title {
         font-size: 24px;
+    }
+
+    .card-select span {
+        font-size: 16px;
+    }
+
+    .card-select svg {
+        width: 20px;
+    }
+
+    th,
+    td {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .custom-pagination {
+        gap: 10px;
+    }
+
+    .custom-icon {
+        width: 30px;
+    }
+
+    .custom-icon span{
+        font-size: 16px;
     }
 }
