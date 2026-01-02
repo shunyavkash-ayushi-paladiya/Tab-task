@@ -26,6 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function pagination() {
+  const link = document.querySelectorAll(".custom-icon");
+
+  link[0].classList.add("active");
+  console.log(link);
+
+  link.addEventListener("click", function (e) {
+    link.forEach((link) => {
+      link.classList.remove("active");
+    });
+    e.target.classList.add("active");
+  });
+  element.style.backgroundColor = "lightblue"; 
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".tab").forEach(initTabs);
 

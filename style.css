@@ -7,7 +7,7 @@
 body {
     background-color: white;
     color: black;
-    font-family: "Inter", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -148,7 +148,6 @@ tr:nth-child(even) {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-top: 40px;
 }
 
 .custom-icon svg {
@@ -164,14 +163,28 @@ tr:nth-child(even) {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: none;
+    background-color: white;
 }
 
 .custom-icon span {
     font-size: 18px;
 }
 
+.custom-pagination-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* .custom-icon.active{
+    background-color: black;
+} */
+
 /* tab section  */
-.tab-section{
+.tab-section {
     padding: 50px 0;
     min-height: 100vh;
     display: flex;
@@ -179,9 +192,14 @@ tr:nth-child(even) {
     justify-content: center;
 }
 
+.tab-2 {
+    padding: 20px;
+    background-color: black;
+    border-radius: 20px;
+}
+
 .tab-list {
     display: flex;
-    margin-bottom: 24px;
     gap: 20px;
 }
 
@@ -192,6 +210,12 @@ tr:nth-child(even) {
     font-size: 18px;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
+    color: white;
+    border-radius: 10px;
+}
+
+.tab-item-2 {
+    color: black;
 }
 
 .tab-content {
@@ -200,24 +224,47 @@ tr:nth-child(even) {
     border-radius: 0 10px 10px;
 }
 
-.tab-content-title {
+/* .tab-content-title {
     padding: 24px 24px 24px 0;
-} 
+} */
 
 .tab .tab .tab-content {
     padding: 0;
 }
 
+.tab-list-2 {
+    padding-bottom: 20px;
+}
+
 .tab-content-item {
     display: none;
-  }
-  
-  .tab-content-item.active {
-    display: block;
-  }
-  
-  .tab-item.active {
+}
+
+.tab-content-item p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.tab-content-title{
+    font-size: 24px;
     font-weight: 600;
-    color: green;
-  }
-  
+    line-height: 1.3;
+}
+
+.tab-content-item.active {
+    display: block;
+}
+
+.tab-item.active {
+    color: black;
+    background-color: greenyellow;
+}
+
+.tab-title {
+    font-size: 34px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: 600;
+}
