@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const options = document.querySelectorAll(".card-option");
 
   let rowsPerPage = rows.length;
-  let currentPage = 0;
+  let currentPage = 1;
   console.log(rowsPerPage);
 
   form.addEventListener("click", (e) => {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.stopPropagation();
       rowsPerPage = Number(opt.textContent);
       text.textContent = opt.textContent;
-      currentPage = 0;
+      currentPage = 1;
       list.classList.remove("active");
       console.log("hii");
       renderTable();
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateArrows(totalPages) {
-    prevArrow.disabled = currentPage === 1;
+    prevArrow.disabled = currentPage === 0;
     nextArrow.disabled = currentPage === totalPages;
   }
 
