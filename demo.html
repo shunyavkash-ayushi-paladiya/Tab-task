@@ -1,0 +1,114 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+      const form = document.querySelector(".card-form");
+      const list = document.querySelector(".card-select-option");
+      const text = document.querySelector(".card-select span");
+      const options = document.querySelectorAll(".card-option");
+      const rows = document.querySelectorAll("tbody tr");
+      const prevArrow = document.querySelector(".prev-arrow");
+      const nextArrow = document.querySelector(".next-arrow");
+      const paginationNums = document.querySelectorAll(".pagination-num");
+      const tableList = document.querySelectorAll(".table-list");
+      const tableContent = document.querySelector("table-content");
+      const pageNumbers = document.getElementById("page-numbers");
+    
+      form?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        list.classList.toggle("active");
+      });
+    
+      options.forEach((opt) => {
+        opt.addEventListener("click", (e) => {
+          e.stopPropagation();
+    
+          const count = Number(opt.textContent);
+          text.textContent = opt.textContent;
+          list.classList.remove("active");
+    
+          rows.forEach((row, i) => {
+            if (i === 0) return;
+            row.style.display = i <= count ? "" : "none";
+          });
+          console.log(count)
+        });
+      });
+    
+      const tableLists = 4;
+      let currentPage = 1;
+      let totalPage = Math.ceil(tableList.length / tableLists);
+    
+    
+      for (let i = 0; i < totalPage; i++) {
+        const createElement = document.createElement("a");
+        createElement.setAttribute("href", "javascript:void(0);");
+        createElement.classList.add("table-link");
+        if (i == 0) {
+          createElement.classList.add("active");
+        }
+        createElement.textContent = i + 1;
+        document.getElementById("custom-pagination").appendChild(createElement);
+      }
+      let tableLinks = document.querySelectorAll(".page-link");
+      // let tableContentWidth = tableContent.getBoundingClientRect().width;
+    
+      function changePage() {
+        let displayPage = currentPage - 1;
+        // tableContent.style.transform = `translateX(-${tableContentWidth * displayPage}px)`;
+      }
+      changePage();
+    
+    //   window.addEventListener(
+    //     "resize",
+    //     function (e) {
+    //         e.preventDefault();
+    //         tableContentWidth = tableContent.getBoundingClientRect().width;
+    //         changePage();
+    //     },
+    //     true
+    // );
+    
+      function updatePagination() {
+        pageNumbers.textContent = `page ${currentPage} of ${totalPage}`
+        currentPage === 1
+          ? prevArrow.setAttribute("disabled", "")
+          : prevArrow.removeAttribute("disabled");
+    
+        currentPage === totalPage
+          ? nextArrow.setAttribute("disabled", "")
+          : nextArrow.removeAttribute("disabled");
+    
+        tableLinks.forEach((tableLinks) => {
+          const page = parseInt(tableLinks.textContent);
+          if (page == currentPage) tableLinks.classList.add("active");
+          else tableLinks.classList.remove("active");
+        });
+      }
+      updatePagination();
+    
+      prevArrow.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          changePage();
+          updatePagination();
+        }
+      });
+    
+      nextArrow.addEventListener("click", () => {
+        if (currentPage < totalPage) {
+          currentPage++;
+          changePage();
+          updatePagination();
+        }
+      });
+    
+      tableLinks.forEach((tableLinks) => {
+        tableLinks.addEventListener("click", () => {
+          currentPage = tableLinks.textContent;
+          changePage();
+          console.log("hello");
+          updatePagination();
+        });
+      });
+    });
+
+</script>

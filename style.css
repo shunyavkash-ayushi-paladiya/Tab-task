@@ -92,6 +92,7 @@ img {
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease-in-out;
+    z-index: 3;
 }
 
 .card-option {
@@ -179,9 +180,9 @@ tr:nth-child(even) {
     margin-top: 40px;
 }
 
-/* .custom-icon.active{
+.c{
     background-color: black;
-} */
+}
 
 /* tab section  */
 .tab-section {
