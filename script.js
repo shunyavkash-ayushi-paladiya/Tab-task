@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const options = document.querySelectorAll(".card-option");
 
   let rowsPerPage = rows.length;
-  let currentPage = 1;
+  let currentPage = 0;
   console.log(rowsPerPage);
 
   form.addEventListener("click", (e) => {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.stopPropagation();
       rowsPerPage = Number(opt.textContent);
       text.textContent = opt.textContent;
-      currentPage = 1;
+      currentPage = 0;
       list.classList.remove("active");
       console.log("hii");
       renderTable();
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rows.forEach((row, index) => {
       row.style.display =
         index >= (currentPage - 1) * rowsPerPage &&
-          index - 1< currentPage * rowsPerPage
+          index < currentPage * rowsPerPage
           ? ""
           : "none";
     });
